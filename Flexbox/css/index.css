@@ -1,0 +1,25 @@
+#sctContenedor{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.cuadrado{
+    width: 100px;
+    height: 100px;
+}
+
+.verde{
+    background-color: green;
+}
+.azul{
+    background-color: blue;
+}
+.rojo{
+    background-color: red;
+}
+.amarillo{
+    background-color: yellow;
+}
