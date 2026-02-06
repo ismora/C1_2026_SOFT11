@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <h1>Cálculo de IMC</h1>
+    <form>
+        <fieldset>
+            <legend><strong>Datos personales</strong></legend>
+            <section>
+                <div>
+                    <label for="txtNombre">Nombre:</label>
+                    <input type="text" id="txtNombre">
+                </div>
+
+                <div>
+                    <label for="txtEdad">Edad:</label>
+                    <input type="number" id="txtEdad">
+                </div>
+
+                <div>
+                    <label for="txtCorreo">Correo:</label>
+                    <input type="email" id="txtCorreo">
+                </div>
+
+                <div>
+                    <label for="txtTelefono">Teléfono:</label>
+                    <input type="tel" id="txtTelefono">
+                </div>
+            </section>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend><strong>IMC</strong></legend>
+
+            <div>
+                <label for="txtPeso">Peso:</label>
+                <input type="number" id="txtPeso">
+            </div>
+
+            <div>
+                <label for="txtEstatura">Estatura:</label>
+                <input type="number" id="txtEstatura">
+            </div>
+
+            <button type="button" id="btnCalcularIMC">Calcular IMC</button>
+        </fieldset>
+
+    </form>
+
+    <br>
+
+    <fieldset>
+        <legend><strong>Resultado</strong></legend>
+        <section id="sctResultadoIMC">
+            <h2>IMC:</h2>
+            <p></p>
+            <label>Escala IMC:</label>
+            <ul>
+                <li>Peso bajo</li>
+                <li>Peso normal</li>
+                <li>Sobrepeso</li>
+            </ul>
+
+        </section>
+    </fieldset>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
