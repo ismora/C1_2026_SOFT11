@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css ">
+    <title>Cálculo de IMC</title>
+</head>
+
+<body>
+    <h1>Cálculo de IMC</h1>
+    <form>
+        <fieldset>
+            <legend>Ingrese sus datos personales
+            </legend>
+            <div>
+                <label for="txtNombre">Nombre</label>
+                <input type="text" id="txtNombre" name="txtPeso" step="0.1" required>
+            </div>
+            <div>
+                <label for="txtEdad">Edad</label>
+                <input type="number" id="txtEdad" name="txtEdad" step="0.1" required>
+            </div>
+            <div>
+                <label for="txtEmail">Correo Electrónico</label>
+                <input type="email" id="txtEmail" name="txtEmail" step="0.1" required>
+            </div>
+
+        </fieldset>
+        <div>
+            <label for="txtPeso">Peso (kg):</label>
+            <input type="number" id="txtPeso" name="txtPeso" step="0.1" required>
+        </div>
+        <br>
+        <div>
+            <label for="altura">Altura (cm):</label>
+            <input type="number" id="txtAltura" name="altura" step="0.01" required>
+        </div>
+        <br><br>
+        <button type="button" value="Calcular IMC" id=btnCalcularIMC>Calcular IMC</button>
+    </form>
+
+    <section id="sctResultadoIMC">
+        <h2>Resultado IMC</h2>
+        <p></p>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
