@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form practica</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <h1>Registro de usuario</h1>
+
+            <fieldset>
+                <legend>Información Personal</legend>
+                <div>
+                    <input type="text" id="nombre" placeholder="Nombre">
+                </div>
+                <div>
+                    <input type="text" id="apellido" placeholder="Apellido">
+                </div>
+                <div class="nombreUsuario">
+                    <label for="nombreUsuario">Nombre de usuario:</label>
+                    <input type="text" id="nombreUsuario">
+                </div>
+
+            </fieldset>
+            <div>
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña">
+            </div>
+            <div>
+                <label for="confirmarContraseña">Confirmar Contraseña</label>
+                <input type="password" id="confirmarContraseña">
+            </div>
+            <div>
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input type="date" id="fechaNacimiento">
+            </div>
+            <div>
+                <label for="genero">Género</label>
+                <select id="genero">
+                    <option value="" disabled selected></option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <button type="button" id="btnRegistrar">Registrar</button>
+        </fieldset>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./JS/index.js"></script>
+
+</body>
+
+</html>
