@@ -1,0 +1,20 @@
+.verde{
+    background-color: rgb(130, 233, 130);
+}
+.azul{
+    background-color: rgb(136, 186, 250);
+}
+.rojo{
+    background-color: rgb(240, 123, 123);
+}
+.amarillo{
+    background-color: rgb(223, 223, 129);
+}
+
+.morado{
+    background-color: rgb(190, 101, 190);
+}
+
+.tamano{
+    min-height: 50px;
+}
