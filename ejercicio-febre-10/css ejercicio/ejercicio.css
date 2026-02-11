@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-grande {
+    width: 800px;
+    height: 500px;
+    background-color: #413d70;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-mediano {
+    width: 400px;
+    height: 300px;
+    background-color: #5aa789;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-pequeno {
+    width: 100px;
+    height: 100px;
+    background-color: #df95c9;
+}
