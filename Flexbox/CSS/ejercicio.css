@@ -1,0 +1,30 @@
+.contenedor {
+    width: 800px;
+     height: 500px;
+     border: 2px solid black;
+     background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.cuadrado-1 {
+    width: 400px;
+    height: 300px;
+    background-color:blue;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.cuadrado-2 {
+    width: 100px;
+    height: 100px;
+    background-color:lightblue;
+    margin: 10px;
+}
