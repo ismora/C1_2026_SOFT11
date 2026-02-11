@@ -2,38 +2,41 @@
 	border: 2px solid black;
 	height: 500px;
 
-    display: flex;
+	display: flex;
 
-    flex-direction: row; /*cambiar el eje principal: row -
+	flex-direction: row;
+	/*cambiar el eje principal: row -
     eje principal horizontal y column - eje principal vertical*/
 
-justify-content: center; /*Alineacion de los elementos en
+	justify-content: center;
+	/*Alineacion de los elementos en
 el eje principal */
 
-align-items: center; /*Alineacion de los elementos en el eje
+	align-items: center;
+	/*Alineacion de los elementos en el eje
 secundario*/
 
 
 }
 
-.cuadrado{
+.cuadrado {
 	width: 75px;
 	height: 75px;
 	border: 2px solid #000;
 }
 
-.verde{
+.verde {
 	background-color: green;
 }
 
-.azul{
+.azul {
 	background-color: blue;
 }
 
-.rojo{
+.rojo {
 	background-color: red;
 }
 
-.amarillo{
+.amarillo {
 	background-color: yellow;
 }

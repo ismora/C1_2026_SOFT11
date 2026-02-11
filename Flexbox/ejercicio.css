@@ -1,0 +1,39 @@
+#sctContenedor {
+
+
+	display: inside;
+
+	flex-direction: center;
+	/*cambiar el eje principal: row -
+    eje principal horizontal y column - eje principal vertical*/
+
+	justify-content: center;
+	/*Alineacion de los elementos en
+el eje principal */
+
+	align-items: center;
+	/*Alineacion de los elementos en el eje
+secundario*/
+
+
+}
+
+
+.gris {
+	background-color: grey;
+    width: 800px;
+	height: 500px;
+}
+
+.azul {
+	background-color: blue;
+    width: 400px;
+	height: 300px;
+}
+
+.celeste {
+	background-color: lightblue;
+    width: 100px;
+	height: 100px;
+
+}
