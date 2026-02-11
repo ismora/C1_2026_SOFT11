@@ -1,0 +1,36 @@
+#sctContenedor{
+    border: 2px solid black;
+    height: 500px;
+
+    display: flex;
+
+    flex-direction: column;  /* cambiar el eje principal: row -> eje principal horizontal y 
+    columna -> eje principal vertical*/
+
+    justify-content: space-evenly; /*Alineacion de lkos elementos en el eje principal*/
+
+    align-items: center;  /*Alineacion de los elementos en el eje principal*/
+
+}
+
+.cuadrado{
+    width: 75px;
+    height: 75px;
+    border: 2px solid #000;
+}
+
+.verde{
+    background-color: green;
+}
+
+.azul{
+    background-color: blue;
+}
+
+.rojo{
+    background-color: red;
+}
+
+.naranja{
+    background-color: orange;
+}
