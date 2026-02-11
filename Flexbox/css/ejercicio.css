@@ -1,0 +1,23 @@
+#sctContenedor{
+    width: 800px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+}
+
+.cuadrado_azul{
+    width: 400px;
+    height: 300px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadrado_celeste{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
