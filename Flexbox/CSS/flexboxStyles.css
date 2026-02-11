@@ -1,0 +1,33 @@
+#setContenedor{
+    border: 2px solid black;
+    height: 500px;
+
+    display: flex;
+
+    flex-direction: row; /* Cambiar el eje principal: row → eje principal horizontal y column → eje principal vertical */
+
+    justify-content: space-evenly; /* Alineación de los elementos en el eje principal */
+
+    align-items: center; /* Alineación de los elementos en el eje secundario */
+
+}
+
+.cuadrado {
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+}
+
+.verde {
+    background-color: green;
+}
+
+.rojo {
+    background-color: red;
+}
+.azul {
+    background-color: blue;
+}
+.amarillo {
+    background-color: yellow;
+}
