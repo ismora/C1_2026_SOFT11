@@ -1,14 +1,16 @@
 #sctContenedor{
-    height: 100vh;
+    border: 2px solid black;
+    height: 500px;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
 }
 
 .cuadrado{
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
 }
 
 .verde{
