@@ -1,0 +1,34 @@
+#sctContenedor{
+    border: 2px solid black;
+    height: 500px;
+
+    display: flex;
+
+    flex-direction: row; /*or column*/
+
+    justify-content: space-evenly; /*alinea en eje principal*/
+
+    align-items: center; /*a;inea en eje secundario*/
+}
+
+.cuadrado{
+    width: 75px;
+    height: 75px;
+    border: 2px solid #000;
+} 
+
+.azul{
+    background-color: blue;
+}
+
+.verde{
+    background-color: green;
+}
+
+.morado{
+    background-color: purple;
+}
+
+.rojo{
+    background-color: red;
+}
