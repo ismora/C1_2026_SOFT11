@@ -1,0 +1,30 @@
+.cuadrado {
+    display: flex;
+
+    flex-direction: row;
+    /*or column*/
+
+    justify-content: center;
+    /*alinea en eje principal*/
+
+    align-items: center;
+    /*alinea en eje secundario*/
+}
+
+.c1 {
+    width: 800px;
+    height: 500px;
+    background-color: gray;
+}
+
+.c2 {
+    width: 400px;
+    height: 300px;
+    background-color: blue;
+}
+
+.c3 {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue
+}
