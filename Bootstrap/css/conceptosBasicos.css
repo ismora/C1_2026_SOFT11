@@ -25,3 +25,7 @@
 .cajaTamanioMinimo {
     min-height: 50px;
 }
+
+.cajaGrande {
+    min-height: 100px;
+}
