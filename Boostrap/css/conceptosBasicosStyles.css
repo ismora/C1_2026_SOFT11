@@ -1,0 +1,20 @@
+.verde {
+    background-color: green;
+}
+
+.rojo {
+    background-color: red;
+}
+.azul {
+    background-color: blue;
+}
+.amarillo {
+    background-color: yellow;
+}
+.morado {
+    background-color: purple;
+}
+
+.cajaTamanoMinimo {
+    min-height: 50px;
+}
