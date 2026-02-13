@@ -1,0 +1,19 @@
+.cajaTamanioMinimo {
+    min-height: 100px;
+}
+
+.azul {
+    background-color: blue;
+}
+
+.verde {
+    background-color: green;
+}
+
+.amarillo {
+    background-color: yellow;
+}
+
+.morado {
+    background-color: purple;
+}
