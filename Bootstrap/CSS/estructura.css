@@ -33,4 +33,15 @@ body{
     display: block;
 }
 
+@media(prefers-color-scheme: dark){
+
+    body{
+        background-color: var(--negro);
+    }
+
+    .topbar{
+        background-color: var(--negroClaro);
+        border-bottom: 1px solid var(--gris);
+    }
+}
 
