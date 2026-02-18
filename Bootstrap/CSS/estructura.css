@@ -1,0 +1,36 @@
+:root {
+    --blanco: #FFFFFF;
+    --azulClaro: #3E578E;
+    --azul: #184E97;
+    --azulOscuro: #11294A;
+    --grisClaro: #ECF0F1;
+    --gris: #D6DBDF;
+    --grisOscuro: #464646;
+    --turquesa: #0DBEB0;
+    --negro: #121212;
+    --negroClaro: #282828;
+}
+
+body{
+    background-color: var(--grisClaro);
+}
+
+.topbar{
+    height: 65px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    position: relative;
+    border-bottom: 7px solid var(--turquesa);
+}
+
+
+.topbar i{
+    color: var(--blanco);
+}
+
+.logo small{
+    font-size: 10px;
+    display: block;
+}
+
+
