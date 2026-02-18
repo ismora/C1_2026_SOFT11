@@ -22,3 +22,12 @@ body{
     position: relative;
     border-bottom: 7px solid var(--turquesa);
 }
+
+.topbar i{
+    color: var(--blanco);
+}
+
+.logo small{
+    font-size: 10px;
+    display: block;
+}
