@@ -11,7 +11,7 @@
     --negroClaro: #282828;
 }
 
-body{
+body {
     background-color: var(--grisClaro);
 }
 
@@ -23,12 +23,22 @@ body{
     border-bottom: 7px solid var(--turquesa);
 }
 
-.topbar i{
+.topbar i {
     color: var(--blanco);
 }
 
-.logo small{
+.logo small {
     font-size: 10px;
     display: block;
+}
 
+@media(prefers-color-scheme: dark) {
+    body {
+        background-color: var(--negro);
+    }
+
+    .topbar {
+        background-color: var(--negroClaro);
+        border-bottom: 1px solid var(--gris);
+    }
 }
