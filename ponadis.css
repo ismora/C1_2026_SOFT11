@@ -87,6 +87,31 @@ body{
     margin-bottom: 10px;
 }
 
+.svg-usuario{
+    width: 200px;
+    fill: var(--grisOscuro);
+    opacity: 0.15;
+}
+
 .list-politicas a{
     color: var(--grisOscuro);
+}
+
+.card-option{
+    background: var(--blanco);
+    border-radius: 14px;
+    width: 157px;
+    height: 166px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-number{
+    background: var(--azulOscuro);
+    color: var(--blanco);
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
 }
