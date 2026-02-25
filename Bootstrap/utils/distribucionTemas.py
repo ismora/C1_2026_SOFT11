@@ -9,18 +9,20 @@ temas = ["Barra de navegación (navbar)",
 "Formularios (forms)", 
 "Carrusel (carousel)", 
 "Tablas (tables)", 
-["Barras de progreso (progress bars)", "Descripciones emergentes (tooltips)"]]
+["Barras de progreso (progress bars)", "Descripciones emergentes (tooltips)"],
+"Buenas prácticas"]
 
 estudiantes = [
-'ADRIAN ALBERTO BROWN GOMEZ'	,   
-'RICARDO JOSE CASTILLO MATARRITA'	,   
+'ADRIAN ALBERTO BROWN GOMEZ: '	,   
+'RICARDO JOSE CASTILLO MATARRITA: '	,   
 'D JEHOVANN NASHAWN DIXON LAWRENCE',   
-'NELSON GERARDO FERNANDEZ GONZALEZ'	,   
-'JOSE PABLO LEON RODRIGUEZ',
-'FABIOLA MATAMOROS GOMEZ',
-'ADONIS NOA FROMETA',
-'MAYCOL STEVEN PORRAS ARAYA',
-'ROBERTO ANDRES THOMAS TORRES'	
+'NELSON GERARDO FERNANDEZ GONZALEZ: '	,   
+'JOSE PABLO LEON RODRIGUEZ: no muestra los dos ejemplos funcionales de implementación indica que los colocó solo en el documento de investigación, no responde a la pregunta: ¿Diferencia entre usar .btn en <a> y <button>?, durante la exposición indica que se puede usar la clase en otros elementos como enlaces, sin embargo indica que el botón tenga un enlace a un video',
+'FABIOLA MATAMOROS GOMEZ: ',
+'ADONIS NOA FROMETA: ',
+'MAYCOL STEVEN PORRAS ARAYA: ',
+'ROBERTO ANDRES THOMAS TORRES: usa collapse para el menú de hamburguesa', 
+"Hazel: "	
 ]
 
 # Mezclar estudiantes
