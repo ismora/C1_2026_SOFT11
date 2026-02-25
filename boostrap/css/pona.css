@@ -29,9 +29,9 @@ body{
 
 .logo small{
     font-size: 10px;
-    display:block;
-
+    display: block;
 }
+
 
 /* Barra lateral */
 .sidebar {
@@ -81,14 +81,42 @@ body{
     color: var(--grisOscuro);
 }
 
-/*@media(prefers-color-scheme: dark){
-        body{
-            background-color: var(--negro);
-        }
 
-        .topbar{
-            background-color: var(--negroClaro);
-            border-bottom: 1px solid var(--gris);
-        }
-}*/
+.svg-usuario{
+    width: 200px;
+    fill: var(--grisOscuro);
+    opacity: 0.15;
+}
 
+.card-option{
+    background: var(--blanco);
+    border-radius: 14px;
+    width: 157px;
+    height: 166px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-number{
+    background: var(--azulOscuro);
+    color: var(--blanco);
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+}
+
+/*
+@media(prefers-color-scheme: dark){
+    body{
+        background-color: var(--negro);
+    }
+
+    .topbar{
+        background-color: var(--negroClaro);
+        border-bottom: 1px solid var(--gris);
+    }
+
+}
+*/
