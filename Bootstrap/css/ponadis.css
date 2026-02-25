@@ -11,11 +11,11 @@
     --negroClaro: #282828;
 }
 
-body{
+body {
     background-color: var(--grisClaro);
 }
 
-.topbar{
+.topbar {
     height: 65px;
     background-color: var(--azul);
     color: var(--blanco);
@@ -23,22 +23,71 @@ body{
     border-bottom: 7px solid var(--turquesa);
 }
 
-.topbar i{
+.topbar i {
     color: var(--blanco);
 }
 
-.logo small{
+.logo small {
     font-size: 10px;
     display: block;
 }
 
-@media(prefers-color-scheme: dark){
-    body{
+/* @media(prefers-color-scheme: dark) {
+    body {
         background-color: var(--negro);
     }
-    .topbar{
+
+    .topbar {
         background-color: var(--negroClaro);
         border-bottom: 1px solid var(--gris);
     }
 
+} */
+
+/* Barra lateral */
+.sidebar {
+    background-color: var(--blanco);
+    border-right: 1px solid var(--azulOscuro);
+    min-height: calc(100vh - 56px);
+}
+
+.role-box {
+    background-color: var(--azulOscuro);
+    color: var(--blanco);
+    font-size: 14px;
+    height: 42px;
+}
+
+.btn-nueva-politica {
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+    font-size: 18px;
+}
+
+.btn-nueva-politica:hover {
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.btn-ver-politicas {
+    background-color: var(--grisClaro);
+    display: block;
+    margin: 0 auto;
+}
+
+.list-politicas li:not(:last-child) {
+    border-bottom: 1px solid var(--gris);
+    padding: 10px 1rem 10px 1rem;
+    margin: 10px -1rem 10px -1rem;
+    /*El padre de la lista tiene p-3 de Bootstrap (.p-3 = padding: 1rem; aprox. 8px)
+    10px 1rem 10px 1rem; == top right bottom left; == top: 10px right: 1rem bottom: 10px left: 1rem
+    Con el margin negativo se saca el li 1rem hacia afuera.
+    Con el padding interno se compensa para que el texto no se desalineé.
+    Y el borde ocupa todo el ancho.
+  */
+    margin-bottom: 10px;
+}
+
+.list-politicas a {
+    color: var(--grisOscuro);
 }
