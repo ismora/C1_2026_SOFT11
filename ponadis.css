@@ -13,7 +13,7 @@
 
 body{
     background-color: var(--grisClaro);
-
+    
 }
 
 .topbar{
@@ -87,14 +87,14 @@ body{
     margin-bottom: 10px;
 }
 
+.list-politicas a{
+    color: var(--grisOscuro);
+}
+
 .svg-usuario{
     width: 200px;
     fill: var(--grisOscuro);
     opacity: 0.15;
-}
-
-.list-politicas a{
-    color: var(--grisOscuro);
 }
 
 .card-option{
@@ -109,7 +109,7 @@ body{
 }
 
 .card-number{
-    background: var(--azulOscuro);
+    background: var(--azulClaro);
     color: var(--blanco);
     width: 27px;
     height: 27px;
