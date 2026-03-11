@@ -34,4 +34,7 @@ const schemaEmpleado = new mongoose.Schema({
             type: String
         }
     }
-})
+});
+
+const Empleado = mongoose.model("Empleado", schemaEmpleado);
+module.exports = Empleado; //Exportar el model para utilizarlo en el backend.

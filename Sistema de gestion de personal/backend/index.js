@@ -9,7 +9,7 @@ const app = express(); //Crear una instancia de express
 const PORT = process.env.PORT || 3000; //Usar el puerto indicado en .env o si no se indica usar el puerto 3000
 
 // Importacion de rutas
-
+const empleadoRoute = require("./routes/empleado.route");
 
 app.use(express.json());//Habilita el manejo de JSON en las peticiones
 app.use(bodyParser.urlencoded({extended:true}));
@@ -26,7 +26,7 @@ mongoose.connect(process.env.MONGODB_URI)
 .catch(error => console.log('Ocurrió un error al conectarse con MongoDB: ', error));
 
 // Rutas
-
+app.use("/empleados", empleadoRoute);
 
 app.get('/', (req,res)=> {
     res.send('Servidor en funcionamiento');
