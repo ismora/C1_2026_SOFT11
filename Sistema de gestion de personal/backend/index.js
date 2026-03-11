@@ -16,9 +16,14 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());//Habilita el anÃ¡lisis de JSON en las peticiones 
 app.use(cors());
 
+
+require("node:dns/promises").setServers(["1.1.1.1", "8.8.8.8"]); // Para el error querySrv ECONNREFUSED  
+
 mongoose.connect(process.env.MONGODB_URI)
+
 .then(()=> console.log('MongoDB Atlas conectado'))
-.catch(error => console.log('Ocurrio un error al conectarse con MongoDB: ', error));
+
+.catch(error => console.log('Ocurrió un error al conectarse con MongoDB: ', error));
 
 // Rutas
 
