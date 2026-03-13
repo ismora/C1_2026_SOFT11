@@ -35,7 +35,13 @@ const SchemaEmpleado = new mongoose.Schema({
             type: String
         }
 
-    }
+    },
+    "certificaciones":[
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Certificacion"
+        }
+    ]
 
 });
 
