@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 3000; //Usar el puerto indicado en .env o si no
 
 // Importacion de rutas
 const empleadoRoute = require("./routes/empleado.route");
+const certificacionRoute = require("./routes/certificacion.route");
+const atestadosRoute = require("./routes/atestados.route"); //
 
 
 app.use(express.json());//Habilita el manejo de JSON en las peticiones
@@ -20,11 +22,15 @@ app.use(cors());
 require("node:dns/promises").setServers(["1.1.1.1", "8.8.8.8"]); // Para el error querySrv ECONNREFUSED https://alexbevi.com/
 mongoose.connect(process.env.MONGODB_URI)
 .then(()=> console.log('MongoDB Atlas conectado'))
-.catch(error => console.log('OcurriÃ³ un error al conectarse con MongoDB: ', error));
+.catch(error => console.log('Ocurrió un error al conectarse con MongoDB: ', error));
 
 // Rutas
 
 app.use("/empleados", empleadoRoute); // Usar la ruta de empleados para manejar las peticiones a /empleados
+app.use("/certificaciones",certificacionRoute); // Usar la ruta de certificaciones para manejar las peticiones a /certificaciones
+
+app.use("atestados",atestadosRoute); // Usar la ruta de atestados para manejar las peticiones a /atestados
+
 
 app.get('/', (req,res)=> {
     res.send('Servidor en funcionamiento');
