@@ -28,6 +28,25 @@ const schemaEmpleado = new mongoose.Schema({
       type: String,
     },
   },
+  certificaciones: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Certificacion",
+    },
+  ],
 });
+
+/** 
+ * {
+  "nombre": "roberto",
+  "correo": "roberto@test.net",
+  "contrasenia": "123",
+  "direccion":{
+      "provincia": "Cartago",
+      "distrito": "Oriental",
+      "canton": "Central"
+  }
+}
+ */
 const Empleado = mongoose.model("Empleado", schemaEmpleado);
 module.exports = Empleado; // Exportar el modelo para utilizarlo en el backend
