@@ -33,7 +33,13 @@ const schemaEmpleado = new mongoose.Schema({
         ubicacion:{
             type: String
         }
-    }
+    },
+    "certificaciones":[
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Certificacion"
+        }
+    ]
 });
 
 const Empleado = mongoose.model("Empleado", schemaEmpleado);
