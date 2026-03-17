@@ -13,26 +13,31 @@ const schemaEmpleado = new mongoose.Schema({
         required: true,
         unique: true
     },
-    contrasenia:{
+    contrasenia: {
         type: String,
     },
-    direccion:{
-        provincia:{
+    direccion: {
+        provincia: {
             type: String,
             required: true,
         },
-        distrito:{
+        distrito: {
             type: String,
             required: true,
         },
-        canton:{
+        canton: {
             type: String,
             required: true,
         },
-        ubicacion:{
+        ubicacion: {
             type: String,
-        },
-    }  
+        }
+    },
+    "certificaciones": [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Certificacion"
+    }]
+ 
 });
 
 const Empleado = mongoose.model("Empleado", schemaEmpleado);

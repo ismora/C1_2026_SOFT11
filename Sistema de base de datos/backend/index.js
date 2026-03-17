@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3000; //Usar el puerto indicado en .env o si no
 
 // ImportaciÃ³n de rutas
 const empleadoRoute = require("./routes/empleado.route");
+const certificacionRoute = require("./routes/certificacion.route");
 
 
 app.use(express.json());//Habilita el manejo de JSON en las peticiones
@@ -24,6 +25,7 @@ mongoose.connect(process.env.MONGODB_URI)
 
 // Rutas
 app.use("/empleados", empleadoRoute);
+app.use("/certificaciones", certificacionRoute);
 
 app.get('/', (req,res)=> {
     res.send('Servidor en funcionamiento');
