@@ -9,6 +9,7 @@
     --turquesa: #0DBEB0;
     --negro: #121212;
     --negroClaro: #282828;
+    --contraste: #0000ff;
 }
 
 body {
@@ -21,6 +22,11 @@ body {
     color: var(--blanco);
     position: relative;
     border-bottom: 7px solid var(--turquesa);
+}
+
+/**NAVBAR**/
+.nav-link_personal {
+    color: var(--contraste) ;
 }
 
 .topbar i {
