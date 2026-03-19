@@ -1,62 +1,61 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const Atestado = require('../models/atestado.model');
-const Empleado = require('../models/empleado.model');
+const Atestado = require("../modelos/atestado.model");
+const Empleado = require("../modelos/empleado.model");
 
-// Guía de status de error: https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Status
+// Guía de status de error: https://developer.mozilla.org/es/docs/Web/HTTP/Reference/Status 
 
 router.post("/", async (req, res) => {
-  const { nombreDocumento, tipo, urlArchivo, fecha, idEmpleado } = req.body;
+    const { nombreDocumento, tipo, urlArchivo, fecha, idEmpleado } = req.body;
 
-  // Validar campos obligatorios
-  if (!nombreDocumento || !tipo || !urlArchivo || !idEmpleado) {
-    return res.status(400).json({ mensajeError: "Los campos nombre del documento, tipo, URL del archivo y id empleado son obligatorios" });
-  }
-
-  // Validar que el tipo esté dentro de los valores permitidos por el enum
-  const tiposPermitidos = ['Diploma', 'Certificado', 'Título', 'Constancia', 'Otro'];
-  if (!tiposPermitidos.includes(tipo)) {
-    return res.status(400).json({ mensajeError: "El tipo debe ser uno de: " + tiposPermitidos.join(', ') });
-  }
-
-  // Validar que el empleado exista en la DB
-  try {
-    const empleadoExistente = await Empleado.findById(idEmpleado);
-    if (!empleadoExistente) {
-      return res.status(400).json({ mensajeError: "El empleado especificado no existe" });
+    // Validar campos obligatorios 
+    if (!nombreDocumento || !tipo || !urlArchivo || !idEmpleado) {
+        return res.status(400).json({ mensajeError: "Los campos nombre del documento, tipo, URL del archivo y id empleado son obligatorios" });
     }
-  } catch (error) {
-    // manejo de error
-  }
+
+    // Validar que el tipo esté dentro de los valores permitidos por el enum
+    const tiposPermitidos = ['Diploma', 'Certificado', 'Titulo', 'Constancia', 'Otro'];
+    if (!tiposPermitidos.includes(tipo)) {
+        return res.status(400).json({ mensajeError: "El tipo debe ser uno de: " + tiposPermitidos.join(', ')});
+    }
+
+    // Validar que el empleado exista en la DB
+    try {
+        const empleadoExistente = await Empleado.findById(idEmpleado);
+        if (!empleadoExistente) {
+            return res.status(400).json({ mensajeError: "El empleado especificado no existe" });
+        }
+    } catch (error) {
+        return res.status(400).json({ mensajeError: "El ID del empleado no es válido" });
+    }
+
+    try {
+        const nuevoAtestado = new Atestado({ nombreDocumento, tipo, urlArchivo, fecha: fecha || undefined, idEmpleado});
+        // Si fecha ===  undefined, mongoose usa el default
+        await nuevoAtestado.save();
+        res.status(201).json(nuevoAtestado);
+
+    } catch (error) {
+        res.status(400).json({ mensajeError: error.message });
+    }
 });
 
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+/* Ejemplo de body para POST: http://localhost:3000/atestados
+{
+  "nombreDocumento": "Diploma de Inglés",
+  "tipo": "Diploma",
+  "urlArchivo": "www.compresor.net",
+  "idEmpleado": "69b361259248f6ff050bb2e0" 
+}
+*/
 
-const atestadoSchema = new mongoose.Schema({
-  nombreDocumento: {
-    type: String,
-    required: true
-  },
-  tipo: {
-    type: String,
-    required: true,
-    enum: ['Diploma', 'Certificado', 'Título', 'Constancia', 'Otro']
-  },
-  urlArchivo: {
-    type: String,
-    required: true
-  },
-  fecha: {
-    type: Date,
-    required: true,
-    default: Date.now
-  },
-  idEmpleado: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Empleado',
-    required: true
-  }
+router.get("/", async (req, res) => {
+    try {
+        const atestados = await Atestado.find().populate('idEmpleado');
+        res.json(atestados);
+    } catch (error) {
+        res.status(500).json({ msj: "Error al obtener los atestados", error });
+    }
 });
 
-module.exports = mongoose.model('Atestado', atestadoSchema);
+module.exports = router;

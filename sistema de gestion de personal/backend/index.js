@@ -11,13 +11,19 @@ const PORT = process.env.PORT || 3000; //Usar el puerto indicado en .env o si no
 // Importacion de rutas
 const empleadoRoute = require("./routes/empleado.route");
 const certificacionRoute = require("./routes/certificacion.route");
-const atestadosRoute = require("./routes/atestados.route"); //
+const atestadosRoute = require("./routes/astestados.route"); 
+const departamentoRoute = require("./routes/departamento.route");
+const evaluacionRoute = require("./routes/evaluacion.route");
+const proyectoRoute = require("./routes/proyecto.route");
+//
+
 
 
 app.use(express.json());//Habilita el manejo de JSON en las peticiones
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());//Habilita el anÃ¡lisis de JSON en las peticiones 
 app.use(cors());
+
 
 require("node:dns/promises").setServers(["1.1.1.1", "8.8.8.8"]); // Para el error querySrv ECONNREFUSED https://alexbevi.com/
 mongoose.connect(process.env.MONGODB_URI)
@@ -30,6 +36,10 @@ app.use("/empleados", empleadoRoute); // Usar la ruta de empleados para manejar 
 app.use("/certificaciones",certificacionRoute); // Usar la ruta de certificaciones para manejar las peticiones a /certificaciones
 
 app.use("atestados",atestadosRoute); // Usar la ruta de atestados para manejar las peticiones a /atestados
+
+app.use("/departamentos", departamentoRoute);
+app.use("/evaluaciones", evaluacionRoute);
+app.use("/proyectos", proyectoRoute);
 
 
 app.get('/', (req,res)=> {
