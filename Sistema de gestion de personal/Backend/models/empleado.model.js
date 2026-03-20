@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// Creacion del esquema
-
-const SchemaEmpleado = new mongoose.Schema({
-    nombre:{
+// Creación del esquema
+const schemaEmpleado = new mongoose.Schema({
+    nombre: {
         type: String,
         required: true,
         unique: false
@@ -14,36 +13,64 @@ const SchemaEmpleado = new mongoose.Schema({
         required: true,
         unique: true
     },
-    contrasenia:{
+    contrasenia: {
         type: String,
         required: true,
     },
-    direccion:{
-        provincia:{
+    direccion: {
+        provincia: {
             type: String,
             required: true,
         },
-        distrito:{
+        distrito: {
             type: String,
             required: true,
         },
-        canton:{
+        canton: {
             type: String,
             required: true,
         },
-        ubicacion:{
+        ubicacion: {
             type: String
         }
-
     },
-    "certificaciones":[
+    certificaciones: [
         {
             type: Schema.Types.ObjectId,
             ref: "Certificacion"
         }
+    ],
+    departamento: {
+        type: Schema.Types.ObjectId,
+        ref: 'Departamento'
+    },
+    proyectos: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Proyecto'
+        }
     ]
-
 });
 
-const Empleado = mongoose.model("Empleado", SchemaEmpleado);
-module.exports = Empleado;  //
+const Empleado = mongoose.model("Empleado", schemaEmpleado);
+module.exports = Empleado; // Exportar el modelo para utilizarlo en el backend  
+
+
+/* 
+
+Ejemplo de empleado: 
+nombre: Roberto
+correo: roberto@test.com
+contrasenia: 123
+direccion: {Puntarenas, BA, BA}
+certificaciones: [
+    1. TypeScript, CENFOTEC
+    2. JavaScript, FUNDATEC
+    3. Angular, CENFOTEC
+]
+departamento: TI - Desarrollo
+proyectos: [
+    1. Eventos 
+    2. Auditoría
+]
+*/
