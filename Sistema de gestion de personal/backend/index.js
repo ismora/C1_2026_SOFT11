@@ -13,6 +13,8 @@ const empleadoRoute = require("./routes/empleado.route");
 
 const certificacionRoute = require("./routes/certificacion.route");
 
+const departamentoRoute = require("./routes/departamento.route")
+
 // const atestadoRoute = require("./routes/atestado.route")
 
 app.use(express.json());//Habilita el manejo de JSON en las peticiones
@@ -32,6 +34,7 @@ mongoose.connect(process.env.MONGODB_URI)
 // Rutas
 app.use("/empleados", empleadoRoute);
 app.use("/certificaciones", certificacionRoute);
+app.use("/departamentos", departamentoRoute);
 
 // app.use("atestados", certificaciones);
 
