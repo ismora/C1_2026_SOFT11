@@ -3,41 +3,51 @@ const Schema = mongoose.Schema;
 
 // Creación del esquema
 const schemaEmpleado = new mongoose.Schema({
-    nombre:{
+    nombre: {
         type: String,
         required: true,
         unique: false
     },
-    correo:{
+    correo: {
         type: String,
         required: true,
         unique: true
     },
-    contrasenia:{
+    contrasenia: {
         type: String,
         required: true,
     },
-    direccion:{
-        provincia:{
+    direccion: {
+        provincia: {
             type: String,
             required: true,
         },
-        distrito:{
-            type: String,
-            required: true,
-        }, 
-        canton:{
+        distrito: {
             type: String,
             required: true,
         },
-        ubicacion:{
+        canton: {
+            type: String,
+            required: true,
+        },
+        ubicacion: {
             type: String
         }
     },
-    "certificaciones":[
+    certificaciones: [
         {
             type: Schema.Types.ObjectId,
             ref: "Certificacion"
+        }
+    ],
+    departamento: {
+        type: Schema.Types.ObjectId,
+        ref: 'Departamento'
+    },
+    proyectos: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Proyecto'
         }
     ]
 });
